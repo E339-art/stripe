@@ -1,0 +1,49 @@
+name: Feature Request
+description: Suggest an improvement or new capability
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to suggest an improvement!
+        Before opening a new request, please search existing issues to avoid duplicates.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: |
+        Describe the pain point or use case that motivated this request.
+        e.g. "I'm trying to handle refunds but there's no Refund resource..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: |
+        How would you like it to work? Include API design if you have one.
+      render: python
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you think about? Why didn't they work?
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - New Stripe resource (e.g. SetupIntents, Disputes)
+        - New feature on existing resource
+        - Testing / developer experience
+        - Documentation
+        - Performance improvement
+        - Other
+    validations:
+      required: true
